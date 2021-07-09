@@ -1,0 +1,66 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,titlesec}
+\usepackage[dvipsnames]{xcolor}
+\titleformat*{\subsection}{\normalfont\large\itshape\titlerule}
+
+\title{Lab 2 - Mathematical Expressions}
+\author{Ratun Rahman, 170042011}
+\date{9 July 2021}
+
+\begin{document}
+
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+
+\section*{\textcolor{ForestGreen}{Cauchy Integral Theorem}}
+\subsection*{}
+If \(\int(x)\) is \textcolor{ForestGreen}{analytic} in some simply connected region \textbf{R}, then 
+\begin{equation}
+ \oint_y f(z)dz= 0 
+\end{equation}
+for any closed \textcolor{ForestGreen}{contour} \(\gamma\) completely contained in \textbf{R}. Writing z as 
+\begin{equation} z \equiv x + iy \end{equation}
+and \(\int(z)\) as
+\begin{equation} f(z) \equiv u + iv \end{equation}
+then gives
+\begin{align}
+\oint_y f(z)dz &= \int_y(u+iv) (dx+idy) \\
+ &= \int_y udx-vdy + i\int_y vdx-udy
+\end{align}
+From \textcolor{ForestGreen}{Green's theorem}, 
+\begin{align}
+\int_y f(x,y)dy - g(x,y)dy &= -\iint \left(\frac{\delta g}{\delta x}+ \frac{\delta f}{\delta y} \right) dx dy \\
+\int_y f(x,y)dy + g(x,y)dy &= -\iint \left(\frac{\delta g}{\delta x}- \frac{\delta f}{\delta y} \right) dx dy ,
+\end{align}
+so (\(\diamond\)) becomes
+\begin{equation} \oint_y f(z)dz = -\iint \left(\frac{\delta v}{\delta x}+ \frac{\delta u}{\delta y} \right) dx dy +i \iint \left(\frac{\delta u}{\delta x}- \frac{\delta v}{\delta y} \right) dx dy. \end{equation}
+But the \textcolor{ForestGreen}{Cauchy-Riemann equations} require that
+\begin{align}
+\frac{\delta u}{\delta x} &= \frac{\delta v}{\delta y} \\
+\frac{\delta u}{\delta y} &= -\frac{\delta v}{\delta x},
+\end{align}
+so
+\begin{equation} \oint_y f(z)dz = 0, \end{equation}
+\textcolor{ForestGreen}{Q.E.D.} \\
+For a \textcolor{ForestGreen}{multiply connected} region, 
+\begin{equation} \oint_{c_1} f(z)dz = \oint_{c_2} f(z)dz. \end{equation}
+\\
+\textcolor{ForestGreen}{\textbf{SEE ALSO:} \\
+ Argument Principle, Cauchy Integral Formula, Contour Integral, Morera's Theorem, Residue Theorem}
+ \subsection*{}
+ \textcolor{ForestGreen}{\textbf{REFERENCES:}}\\
+Arfken, G. "Cauchy's Integral Theorem." §6.3 in Mathematical Methods for Physicists, 3rd ed. Orlando, FL: Academic Press, pp. 365-371, 1985.\\
+Kaplan, W. "Integrals of Analytic Functions. Cauchy Integral Theorem." §9.8 in Advanced Calculus, 4th ed. Reading, MA: Addison-Wesley, pp. 594-598, 1991.\\
+Knopp, K. "Cauchy's Integral Theorem." Ch. 4 in Theory of Functions Parts I and II, Two Volumes Bound as One, Part I. New York: Dover, pp. 47-60, 1996.\\
+Krantz, S. G. "The Cauchy Integral Theorem and Formula." §2.3 in Handbook of Complex Variables. Boston, MA: Birkhäuser, pp. 26-29, 1999.\\
+Morse, P. M. and Feshbach, H. Methods of Theoretical Physics, Part I. New York: McGraw-Hill, pp. 363-367, 1953.\\
+Woods, F. S. "Integral of a Complex Function." §145 in Advanced Calculus: A Course Arranged with Special Reference to the Needs of Students of Applied Mathematics. Boston, MA: Ginn, pp. 351-352, 1926. \\
+ \subsection*{}
+ Referenced on Wolfram|Alpha: \textcolor{ForestGreen}{Cauchy Integral Theorem}
+  \subsection*{}
+ \textcolor{ForestGreen}{\textbf{ CITE THIS AS:}}\\
+Weisstein, Eric W. "Cauchy Integral Theorem." From MathWorld--A Wolfram Web Resource. https://mathworld.wolfram.com/CauchyIntegralTheorem.html 
+\end{document}
